@@ -13,7 +13,7 @@ Custody is being designed for the Alexa+ track of Amazon's **Build, Ship, Shape*
 
 ## Development status
 
-**Planning and scaffold stage.** This README defines the agreed MVP, architecture, tool contracts, voice behavior, security boundaries, and delivery plan. The implementation will be added incrementally and each completed capability will be checked off in the roadmap.
+**Transport scaffold implemented.** The FastAPI host, Streamable HTTP MCP endpoint, health check, and six typed stub tools are in place. Database-backed behavior begins in Milestone 2.
 
 ## Naming
 
@@ -831,20 +831,20 @@ The final hosting provider will be selected after the local MCP and Alexa+ simul
 
 ### Milestone 0 — Repository and Codespace
 
-- [ ] Create `custody-alexa-mcp`
-- [ ] Add MIT license
-- [ ] Open a GitHub Codespace
-- [ ] Add Python 3.12 devcontainer
-- [ ] Add `pyproject.toml`, Ruff, mypy, Pytest, and CI
+- [x] Create `custody-alexa-mcp`
+- [x] Add MIT license
+- [x] Open a GitHub Codespace
+- [x] Add Python 3.12 devcontainer
+- [x] Add `pyproject.toml`, Ruff, mypy, Pytest, and CI
 
 **Exit condition:** A clean Codespace runs the test command successfully.
 
 ### Milestone 1 — MCP transport skeleton
 
-- [ ] Create `MCPServer("mcp-server-custody")`
-- [ ] Mount Streamable HTTP in FastAPI
-- [ ] Add `/health`
-- [ ] Register six stub tools with final schemas
+- [x] Create `MCPServer("mcp-server-custody")`
+- [x] Mount Streamable HTTP in FastAPI
+- [x] Add `/health`
+- [x] Register six stub tools with final schemas
 - [ ] Verify tool discovery in MCP Inspector
 
 **Exit condition:** Inspector lists exactly six tools and can invoke each stub.
@@ -979,4 +979,3 @@ MIT License. A complete `LICENSE` file will be added when the repository is init
 - [Official MCP Python SDK](https://py.sdk.modelcontextprotocol.io/)
 - [Mounting an MCP server in an ASGI application](https://py.sdk.modelcontextprotocol.io/run/asgi/)
 - [Agent Skills specification](https://agentskills.io/specification)
-
